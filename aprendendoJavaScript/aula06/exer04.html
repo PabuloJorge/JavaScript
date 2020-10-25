@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font: 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Digite seu nome: ")
+        document.write(`Olá, <Strong>${nome}</Strong>. O seu nome tem ${nome.length} letras!</br>`)
+        document.write(`Seu nome em maiúsculas fica ${nome.toUpperCase()}</br>`)
+        document.write(`Seu nome em minúsculas fica ${nome.toLowerCase()}</br>`)
+
+        //formatando número
+        var n1 = Number(window.prompt("Digite um número: "))
+        document.write(`Mostrando o número com duas casas decimais e alterando o 'ponto' por 'vírgula' = ${n1.toFixed(2).replace('.', ',')}</br>`)
+        document.write(`Transformando o número em moeda. REAL = ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`)
+        document.write(`Transformando o número em moeda. DÓLAR = ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}</br>`)
+        document.write(`Transformando o número em moeda. EURO = ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}`)
+</script>
+</body>
+</html>
