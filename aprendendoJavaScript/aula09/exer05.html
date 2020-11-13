@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(74, 44, 243);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <Strong>DOM</Strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <div class="msga">Selecionando pelo nome</div>
+    <div id="msgb">Selecionando com o seletor(id)</div>
+    <div class="msgc">Selecionando com o seletor(class)</div>
+    <script>
+        var corpo = window.document.body // selecionando o corpo do site utilizando o nome da tag
+        var p1 = window.document.getElementsByTagName('p')[
+            1] //selecionando o segundo parágrafo utilizando o nome da tag
+
+
+        var div1 = window.document.getElementById('msg') //selecionando  a 1º  div pelo ID dela 
+
+        var div2 = window.document.getElementsByClassName('msga')[0] //selecionando a 2º div pelo nome 
+
+        var div3 = window.document.querySelector('div#msgb') //para indicar a seleção por id, usa o '#'("jogo da velha")
+
+        var div4 = window.document.querySelector('div.msgc') //para indicar a seleção por class, usa o '.'(ponto)
+
+        window.document.write("Está escrito assim (sem formatação): " + p1.innerText +
+            "</br>") //utilizando o texto do segundo parágrafo, porém não mantém a formatação
+        window.document.write("Está escrito assim (com formatação): " + p1.innerHTML +
+            "</br>") //utilizando o texto do segundo parágrafo, mantendo a formatação
+        window.document.write("Está escrito assim (com formatação): " + div1.innerHTML + "</br>")
+
+
+
+        p1.style.color = 'red' // alterando a cor do primeiro parágrafo
+        corpo.style.background = 'black' // alterando a cor de fundo do corpo
+        div1.style.color = 'red'
+        div2.style.color = 'blue'
+        div3.style.color = 'yellow'
+        div4.style.color = 'green'
+
+
+
+        div1.innerText = "Estou alterando o texto da 1º div"
+    </script>
+</body>
+
+</html>
